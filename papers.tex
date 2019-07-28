@@ -1,0 +1,82 @@
+\documentclass{tufte-handout}
+
+\title{Paper notes}
+
+\author{The Author}
+
+\date{}
+
+%\date{28 March 2010} % without \date command, current date is supplied
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+\usepackage{lipsum}   % filler text
+\usepackage{fancyvrb} % extended verbatim environments
+  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+\usepackage[ruled]{algorithm2e}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent
+This is a template for paper collection reading notes.
+\end{abstract}
+
+%\printclassoptions
+
+\section{Section}\label{sec:example}
+\newthought{Introduction to} whatever the set of following papers is about.
+\subsection{Paper 1}\label{sec:paper-1}
+Here is the summary for the first paper \cite{Tufte2006}. Lorem Ipsum
+\footnote{Footnotes have a number and become sidenotes}, more lorem ipsum.
+\marginnote{This is a margin note.  Notice that there isn't a number preceding the note, and
+there is no number in the main text where this note was written.}
+
+We also add an algorithm here, see Algorithm~\ref{alg:example}.
+
+\begin{algorithm}[tbp]
+	\label{alg:example} 
+\caption{How to write algorithms}
+% \SetAlgoLined
+\KwResult{This is the result}
+ initialization\;
+ \While{condition}{
+  instructions\;
+  \eIf{condition}{
+   instructions1\;
+   instructions2\;
+   }{
+   instructions3\;
+  }
+ }
+\end{algorithm}
+
+\subsection{References}
+References are placed alongside their citations as sidenotes,
+as well.  This can be accomplished using the normal \Verb|\cite|
+command.\sidenote{The first paragraph of this document includes a citation.}
+
+The complete list of references may also be printed automatically by using
+the \Verb|\bibliography| command.  (See the end of this document for an
+example.)  If you do not want to print a bibliography at the end of your
+document, use the \Verb|\nobibliography| command in its place.  
+
+To enter multiple citations at one location,\cite{Tufte2006,Tufte1990} you can
+provide a list of keys separated by commas and the same optional vertical
+offset argument: \Verb|\cite{Tufte2006,Tufte1990}|.  
+
+\bibliography{papers}
+\bibliographystyle{plainnat}
+
+
+
+\end{document}
