@@ -1,4 +1,4 @@
 papers.tex
 ==========
 
-Template for notes on collections of papers.
+LaTeX template for paper reading notes.
